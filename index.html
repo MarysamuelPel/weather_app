@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+      body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+    }
+    li{
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 55px;
+      padding: 30px 0;
+      border-radius: 10px;
+      transition: all 250ms ease-in-out;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    li:hover{
+      background-color: #FEFBEF;
+    }
+
+    button{
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      background-color: #3565D6;
+      padding: 20px 25px;
+      border-radius: 30px;
+      border: 1px solid #3565D6;
+      font-size: 15px;
+      transition: all 250ms ease-in-out;
+    }
+
+    button:hover{
+      background-color: #fff;
+      color: #3565D6;
+    }
+    .content{
+      text-align: center;
+      color: #3565D6;
+      font-size: large;
+      padding: 0;
+      margin: 0;
+      line-height: 48px;
+
+    }
+    .cont{
+      font-size: 30px;
+      color: black;
+      margin: 0;
+    }
+    
+    .contact{
+      text-align: center;
+      color: #A7A7A7;
+    }
+    .weather{
+      font-weight: bold;
+    }
+    .contain{
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+   <span> ☁</span>
+    <h1>Currently 21 in Tokyo</h1>
+    <p class="cont">13 /<strong>23</strong> </p>
+  </div>
+
+  <ul>
+    <li>
+    <strong> ☁Tomorrow</strong>  
+    <div class="contain"> 10 / <strong> 22</strong></div> 
+    </li>
+
+    <li>
+     <strong>☁Saturday</strong> 
+      <div class="contain">15 /<strong>17</strong></div>
+      
+    </li>
+
+    <li>
+     <strong>☀ Sunday</strong>
+      <div class="contain">25 / <strong>28</strong> </div> 
+    </li>
+  </ul>
+
+  <button>
+    Change City
+  </button>
+
+  <p class="contact">Coded by Mary Samuel</p>
+</body>
+</html>
