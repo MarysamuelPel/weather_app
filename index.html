@@ -1,109 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <style>
-      body{
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
         font-family: Arial, Helvetica, sans-serif;
       }
-    ul{
-      list-style: none;
-      padding: 0;
-      margin-top: 50px;
-    }
-    li{
-      text-align: center;
-      font-size: 25px;
-      margin-bottom: 55px;
-      padding: 20px 0;
-      border-radius: 10px;
-      transition: all 250ms ease-in-out;
-      margin: 0 auto;
-      max-width: 400px;
-    }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 30px;
+      }
+      li {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 55px;
+        padding: 20px 0;
+        border-radius: 10px;
+        transition: all 250ms ease-in-out;
+        margin: 0 auto;
+        max-width: 400px;
+      }
 
-    li:hover{
-      background-color: #FEFBEF;
-    }
+      li:hover {
+        background-color: #fefbef;
+      }
 
-    button{
-      display: block;
-      margin: 0 auto;
-      color: #fff;
-      background-color: #3565D6;
-      padding: 20px 25px;
-      border-radius: 30px;
-      border: 1px solid #3565D6;
-      font-size: 15px;
-      transition: all 250ms ease-in-out;
-      cursor: pointer;
-    }
+      button {
+        display: block;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #3565d6;
+        padding: 20px 25px;
+        border-radius: 30px;
+        border: 1px solid #3565d6;
+        font-size: 15px;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
+      }
 
-    button:hover{
-      background-color: #fff;
-      color: #3565D6;
-    }
-    .content{
-      text-align: center;
-      color: #3565D6;
-      font-size: large;
-      padding: 0;
-      margin: 0;
-      line-height: 48px;
+      button:hover {
+        background-color: #fff;
+        color: #3565d6;
+      }
+      .content {
+        text-align: center;
+        color: #3565d6;
+        font-size: large;
+        padding: 0;
+        margin: 0;
+        line-height: 48px;
+      }
+      .cont {
+        font-size: 30px;
+        color: black;
+        margin: 0;
+      }
 
-    }
-    .cont{
-      font-size: 30px;
-      color: black;
-      margin: 0;
-    }
-    
-    .contact{
-      text-align: center;
-      color: #A7A7A7;
-      font-family: monospace;
-      font-size: 20px;
-    }
-    .weather{
-      font-weight: bold;
-    }
-    .contain{
-      font-size: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="content">
-    <h1>🌤
-      <br>
-      Currently 21° in Tokyo</h1>
-    <p class="cont">13° /<strong>23°</strong> </p>
-  </div>
+      .contact {
+        text-align: center;
+        color: #a7a7a7;
+        font-family: monospace;
+        font-size: 20px;
+      }
+      .weather {
+        font-weight: bold;
+      }
+      .contain {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>
+        🌤
+        <br />
+        Currently 21° in Tokyo
+      </h1>
+      <p class="cont">13° /<strong>23°</strong></p>
+    </div>
 
-  <ul>
-    <li>
-    <strong> 🌧Tomorrow</strong>  <br> <br>
-    <div class="contain"> 10° / <strong> 22°</strong></div> 
-    </li>
+    <ul>
+      <li>
+        <strong> 🌧Tomorrow</strong> <br />
+        <br />
+        <div class="contain">10° / <strong> 22°</strong></div>
+      </li>
 
-    <li>
-     <strong>🌥 Saturday</strong> <br> <br>
-      <div class="contain">15° /<strong>17°</strong></div>
-      
-    </li>
+      <li>
+        <strong>🌥 Saturday</strong> <br />
+        <br />
+        <div class="contain">15° /<strong>17°</strong></div>
+      </li>
 
-    <li>
-     <strong>☀️ Sunday</strong> <br> <br>
-      <div class="contain">25° / <strong>28°</strong> </div> 
-    </li>
-  </ul>
+      <li>
+        <strong>☀️ Sunday</strong> <br />
+        <br />
+        <div class="contain">25° / <strong>28°</strong></div>
+      </li>
+    </ul>
 
-  <button>
-    Change City
-  </button>
+    <button>Change City</button>
 
-  <p class="contact">Coded by Mary Samuel</p>
-</body>
+    <p class="contact">Coded by Mary Samuel</p>
+    <script>
+      function tempt() {
+        let city = prompt("Which city do you live in?");
+        let temperature = prompt("What is the current temperature?");
+        let head = document.querySelector("h1");
+        if (temperature < 0) {
+          head.innerHTML = `😢 <br> currently ${temperature}° at ${city}`;
+        } else {
+          head.innerHTML = `😊 <br> currently ${temperature}° at ${city}`;
+        }
+      }
+
+      let btn = document.querySelector("button");
+      btn.addEventListener("click", tempt);
+    </script>
+  </body>
 </html>
