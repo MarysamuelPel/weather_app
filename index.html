@@ -11,7 +11,7 @@
       ul {
         list-style: none;
         padding: 0;
-        margin-top: 30px;
+        margin-top: 40px;
       }
       li {
         text-align: center;
@@ -112,9 +112,9 @@
         let temperature = prompt("What is the current temperature?");
         let head = document.querySelector("h1");
         if (temperature < 0) {
-          head.innerHTML = `😢 <br> currently ${temperature}° at ${city}`;
+          head.innerHTML = `😢 <br/> currently ${temperature}° at ${city}`;
         } else {
-          head.innerHTML = `😊 <br> currently ${temperature}° at ${city}`;
+          head.innerHTML = `😊 <br/> currently ${temperature}° at ${city}`;
         }
       }
 
